@@ -1,0 +1,56 @@
+/*Variables*/
+:root{
+    --back-header: #8D0801;
+    --main-font: 'Roboto', sans-serif;
+    --second-font: 'Dela Gothic One', cursive;
+    --color-header: #FFFFFF;
+}
+
+/*Estilos generales*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: var(--main-font);
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.6rem;
+}
+.img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*utilidades*/
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.txt-center{
+    text-align: center;
+}
+
+/*Estilos header*/
+.header{
+    width: 100vw;
+    padding: 2rem 0;
+    background-color: var(--back-header);
+}
+.header__title{
+    font-family: var(--second-font);
+    color: var(--color-header);
+}
+
+/*Estilos main*/
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__img{
+    width: 20rem;
+}
