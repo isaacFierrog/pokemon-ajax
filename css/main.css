@@ -1,9 +1,22 @@
 /*Variables*/
 :root{
-    --back-header: #8D0801;
+    --back-header: #690a05;
     --main-font: 'Roboto', sans-serif;
     --second-font: 'Dela Gothic One', cursive;
     --color-header: #FFFFFF;
+
+    --back-pokedex: #89061C;
+    --back-luz-azul: #28A9FB;
+    --back-luz-roja: #f03c5a;
+    --back-luz-amarilla: #D9BE17;
+    --back-luz-verde: #5BAA67;
+    --back-display: #DEDEDE;
+    --back-screen: #28A9FB;
+    --back-flechas: #00312B;
+    --back-pad: #51AE5F;
+
+    --size-luz-grande: 6rem;
+    --size-luz-chica: 2rem;
 }
 
 /*Estilos generales*/
@@ -24,6 +37,20 @@ body{
     max-width: 100%;
     height: auto;
 }
+.main, 
+.header,
+.controles,
+.panel{
+    display: grid;
+}
+.luces,
+.luces__panel,
+.flechas,
+.flechas__horizonte,
+.flechas__vertical,
+.panel__botones{
+    display: flex;
+}
 
 /*utilidades*/
 .container{
@@ -34,23 +61,109 @@ body{
     text-align: center;
 }
 
-/*Estilos header*/
-.header{
-    width: 100vw;
-    padding: 2rem 0;
-    background-color: var(--back-header);
-}
-.header__title{
-    font-family: var(--second-font);
-    color: var(--color-header);
-}
 
 /*Estilos main*/
 .main{
-    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    grid-template-rows: 1fr 2fr 1fr;
+    background-color: var(--back-pokedex);
+}
+
+/*Estilos header*/
+.header{
+    grid-template-columns: 60% 40%;
+}
+.luces{
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+}
+.luces__principal{
+
+}
+.luces__panel{
+    width: 100%;
+    padding: 0 1.5rem;
+    justify-content: space-between;
+}
+.luces__luz{
+    width: var(--size-luz-grande);
+    height: var(--size-luz-grande);
+    border-radius: 50%;
+    border: 0.5rem solid white;
+    background-color: var(--back-luz-azul);
+}
+.luces__luz--chica{
+    width: var(--size-luz-chica);
+    height: var(--size-luz-chica);
+    border: none;
+}
+.luces__luz--roja{
+    background-color: var(--back-luz-roja);
+}
+.luces__luz--amarilla{
+    background-color: var(--back-luz-amarilla);
+}
+.luces__luz--verde{
+    background-color: var(--back-luz-verde);
+}
+
+/*Estilos footer*/
+.controles{
+    grid-template-columns: 20% 45% 35%;
+}
+.controles__boton{
+    width: 4rem;
+    height: 4rem;
+    margin-top: 2.5rem;
+    justify-self: center;
+    border-radius: 50%;
+    background-color: var(--back-flechas);
+}
+.flechas{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}.flechas__horizonte{
+    width: 9rem;
+    height: 3rem;
+}
+.flechas__vertical{
+    width: 3rem;
+    height: 9rem;
     flex-direction: column;
+}
+.flechas__horizonte,
+.flechas__vertical{
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.5rem;
+    background-color: var(--back-flechas);
+    border-radius: 0.5rem;
+}
+.flechas__flecha{
+    cursor: pointer;
+}
+.panel{
+    width: 100%;
+    padding: 2rem;
+    grid-template-rows: 1fr 2fr;
+}
+.panel__botones{
+    justify-content: space-around;
     align-items: center;
 }
-.main__img{
-    width: 20rem;
+.panel__boton{
+    flex-basis: calc(50% - 1rem);
+    height: 0.8rem;
+    background-color: var(--back-flechas);
+    border-radius: 2rem;
+}
+.panel__pad{
+    width: 90%;
+    height: 5rem;
+    place-self: center;
+    background-color: var(--back-pad);
+    border-radius: 0.2rem;
 }

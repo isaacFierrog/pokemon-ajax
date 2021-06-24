@@ -15,15 +15,42 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="header__title txt-center">Lista de pokemones</h1>
-    </header>
-    <main class="main container">
-        <figure class="main__figure">
-            <img class="main__img" id="frente-pokemon">
-            <img class="main__img" id="detras-pokemon">
-        </figure>
-        <h2 id="nombre-pokemon"></h2>
+    <main class="main">
+        <header class="header">
+            <div class="luces">
+                <div class="luces__principal">
+                    <div class="luces__luz"></div>
+                </div>
+                <div class="luces__panel">
+                    <div class="luces__luz luces__luz--chica luces__luz--roja"></div>
+                    <div class="luces__luz luces__luz--chica luces__luz--amarilla"></div>
+                    <div class="luces__luz luces__luz--chica luces__luz--verde"></div>
+                </div>
+            </div>
+        </header>
+        <section class="display">
+
+        </section>
+        <footer class="controles">
+            <div class="controles__boton"></div>
+            <div class="panel">
+                <div class="panel__botones">
+                    <div class="panel__boton"></div>
+                    <div class="panel__boton"></div>
+                </div>
+                <div class="panel__pad"></div>
+            </div>
+            <div class="flechas">
+                <div class="flechas__horizonte">
+                    <p class="flechas__flecha flechas--left">&ltrif;</p>
+                    <p class="flechas__flecha flechas--right">&rtrif;</p>
+                </div>
+                <div class="flechas__vertical">
+                    <p class="flechas__flecha flechas--up">&utrif;</p>
+                    <p class="flechas__flecha flechas--down">&dtrif;</p>
+                </div>
+            </div>
+        </footer>
     </main>
     <script src="./js/main.js"></script>
 </body>
